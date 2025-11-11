@@ -3,7 +3,16 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home',[]);
+    return view('home');
+});
+
+Route::get('/users', function () {
+    return view('users.usersList',[
+        "users"=>[
+            ["id"=>1,"name"=>"Enrique"],
+            ["id"=>2,"name"=>"Marta"],
+        ]
+    ]);
 });
 
 // ----------------------------------------
@@ -41,4 +50,5 @@ Route::get('perfil/{id?}', function ($id = null) {
         return 'Visualizar el currículo propio';
     return 'Visualizar el currículo de ' . $id;
 }) -> where('id', '[0-9]+');
+
 

@@ -5,7 +5,7 @@
     <li>Opcion adicional</li>
 @endsection
 @section('content')
-    <h2>Marca Personal FP</h2>
+    <h2>Enrique Carrascosa</h2>
     <p>Pagina principal</p>
 @endsection
 
