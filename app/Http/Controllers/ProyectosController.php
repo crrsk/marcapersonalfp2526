@@ -25,11 +25,11 @@ class ProyectosController extends Controller
             $estadoBool=false;
         }
 
-        
 
 
 
-         return view('proyectos.show')
+
+        return view('proyectos.show')
            ->with('proyecto',$this->arrayProyectos[$id])
            ->with('id',$id)
            ->with('calificacion',$estado)
@@ -52,7 +52,7 @@ class ProyectosController extends Controller
            ->with('id',$id);
 
     }
-
+    
 
 
 
