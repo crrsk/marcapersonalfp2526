@@ -8,7 +8,6 @@ class ProyectosController extends Controller
 {
     public function getIndex()
     {
-<<<<<<< HEAD
         return view('proyectos.index', array('proyectos' => $this->arrayProyectos));
     }
 
@@ -39,25 +38,11 @@ class ProyectosController extends Controller
     }
 
 
-=======
-        return view('proyectos.index')
-            ->with('proyectos', self::$arrayProyectos);
-    }
-
-    public function getShow($id)
-    {
-        return view('proyectos.show')
-            ->with('proyecto', self::$arrayProyectos[$id])
-            ->with('id', $id);
-    }
-
->>>>>>> c9e1976cd8207c87daae5a5f955e8e899160e80f
     public function getCreate()
     {
         return view('proyectos.create');
     }
 
-<<<<<<< HEAD
 
     public function getEdit($id)
     {
@@ -67,21 +52,11 @@ class ProyectosController extends Controller
            ->with('id',$id);
 
     }
-    
 
 
 
-    private  $arrayProyectos = [
-=======
-    public function getEdit($id)
-    {
-        return view('proyectos.edit')
-            ->with('proyecto', self::$arrayProyectos[$id])
-            ->with('id', $id);
-    }
 
-    public static $arrayProyectos = [
->>>>>>> c9e1976cd8207c87daae5a5f955e8e899160e80f
+    public static  $arrayProyectos = [
         [
             'docente_id' => 1,
             'nombre' => 'Tecnologías de la Información',

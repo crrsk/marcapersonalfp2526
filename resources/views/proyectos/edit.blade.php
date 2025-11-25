@@ -6,7 +6,6 @@
         <div class="offset-md-3 col-md-6">
             <div class="card">
                 <div class="card-header text-center">
-<<<<<<< HEAD
                     Modificar Proyecto {{$id}}
                 </div>
                 <div class="card-body" style="padding:30px">
@@ -20,25 +19,10 @@
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
                             <input type="text" name="nombre" id="nombre" class="form-control" value="{{$proyecto['nombre']}}">
-=======
-                    Modificar proyecto
-                </div>
-                <div class="card-body" style="padding:30px">
-
-                    <form action="{{ action([App\Http\Controllers\ProyectosController::class, 'update'], ['id' => $id]) }}" method="POST">
-
-                        @csrf
-                        @method('PUT')
-
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" class="form-control" value="{{ $proyecto['nombre'] }}">
->>>>>>> c9e1976cd8207c87daae5a5f955e8e899160e80f
                         </div>
 
                         <div class="form-group">
                             <label for="docente_id">Docente</label>
-<<<<<<< HEAD
                             <input type="number" name="docente_id" id="docente_id" value="{{$proyecto['docente_id']}}">
                         </div>
 
@@ -46,14 +30,6 @@
                         <div class="form-group">
                             <label for="dominio">Dominio</label>
                             <input type="text" name="dominio" id="dominio" value="{{$proyecto['dominio']}}">
-=======
-                            <input type="number" name="docente_id" id="docente_id" value="{{ $proyecto['docente_id'] }}">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="dominio">Dominio</label>
-                            <input type="text" name="dominio" id="dominio" class="form-control" value="{{ $proyecto['dominio'] }}">
->>>>>>> c9e1976cd8207c87daae5a5f955e8e899160e80f
                         </div>
 
                         <div class="form-group">
@@ -67,19 +43,11 @@
                             </button>
                         </div>
 
-<<<<<<< HEAD
                         {{-- TODO: Cerrar formulario --}}
-=======
-                    </form>
->>>>>>> c9e1976cd8207c87daae5a5f955e8e899160e80f
 
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> c9e1976cd8207c87daae5a5f955e8e899160e80f
 
 @stop
