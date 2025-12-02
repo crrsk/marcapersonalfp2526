@@ -9,7 +9,7 @@ class ProyectosController extends Controller
 {
     public function getIndex()
     {
-        return view('proyectos.index', array('proyectos' => Proyecto::$arrayProyectos));
+        return view('proyectos.index', array('proyectos' => Proyecto::all()));
     }
 
 
@@ -17,12 +17,13 @@ class ProyectosController extends Controller
     {
         $estado="";
         $estadoBool=false;
-        $calificacion=$this->arrayProyectos[$id]['metadatos']['calificacion'];
+        $calificacion=unserialize($proyecto->metadatos)["calificacion"];
+
         if($calificacion>=5){
-            $estado="Proyecto Aprobado";
+            $estado="Proyecto aprobado";
             $estadoBool=true;
         }else{
-            $estado="Proyecto Suspendido";
+            $estado="Proyecto suspendido";
             $estadoBool=false;
         }
 
@@ -31,7 +32,7 @@ class ProyectosController extends Controller
 
 
         return view('proyectos.show')
-           ->with('proyecto',$this->arrayProyectos[$id])
+           ->with('proyecto',Proyecto::findOrFail($id))
            ->with('id',$id)
            ->with('calificacion',$estado)
            ->with('estadoBool',$estadoBool);
@@ -49,7 +50,7 @@ class ProyectosController extends Controller
     {
 
         return view('proyectos.edit')
-           ->with('proyecto',$this->arrayProyectos[$id])
+           ->with('proyecto',Proyecto::findOrFail($id))
            ->with('id',$id);
 
     }
