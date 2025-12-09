@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Proyecto;
 use Illuminate\Http\Request;
 
 class ProyectosController extends Controller
 {
     public function getIndex()
     {
-        return view('proyectos.index', array('proyectos' => $this->arrayProyectos));
+        return view('proyectos.index')
+            ->with('proyectos', Proyecto::all());
     }
 
 
@@ -30,11 +32,8 @@ class ProyectosController extends Controller
 
 
         return view('proyectos.show')
-           ->with('proyecto',$this->arrayProyectos[$id])
-           ->with('id',$id)
-           ->with('calificacion',$estado)
-           ->with('estadoBool',$estadoBool);
-
+            ->with('proyecto', Proyecto::findOrFail($id))
+            ->with('id', $id);
     }
 
 
@@ -48,9 +47,8 @@ class ProyectosController extends Controller
     {
 
         return view('proyectos.edit')
-           ->with('proyecto',$this->arrayProyectos[$id])
-           ->with('id',$id);
-
+            ->with('proyecto', Proyecto::findOrFail($id))
+            ->with('id', $id);
     }
 
 
@@ -158,5 +156,4 @@ class ProyectosController extends Controller
             ]
         ],
     ];
-
 }
