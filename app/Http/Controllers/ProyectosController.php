@@ -16,16 +16,16 @@ class ProyectosController extends Controller
 
     public function getShow($id)
     {
-        $estado="";
-        $estadoBool=false;
-        $calificacion=$this->arrayProyectos[$id]['metadatos']['calificacion'];
-        if($calificacion>=5){
-            $estado="Proyecto Aprobado";
-            $estadoBool=true;
-        }else{
-            $estado="Proyecto Suspendido";
-            $estadoBool=false;
-        }
+      // $estado="";
+       // $estadoBool=false;
+      //  $calificacion=$this->arrayProyectos[$id]['metadatos']['calificacion'];
+       // if($calificacion>=5){
+        //    $estado="Proyecto Aprobado";
+        //    $estadoBool=true;
+        // }else{
+        //    $estado="Proyecto Suspendido";
+        //    $estadoBool=false;
+       // }
 
 
 

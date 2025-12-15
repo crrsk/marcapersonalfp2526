@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 
 {
-     public function getHome()
+    public function getHome()
     {
-         return redirect()->action([ProyectosController::class,'getIndex']);
+        return redirect()->action([ProyectosController::class, 'getIndex']);
     }
 
 }
