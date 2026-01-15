@@ -14,7 +14,7 @@ class FamiliasProfesionalesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        FamiliaProfesional::truncate();
+        //FamiliaProfesional::truncate();
         foreach (self::$familias_profesionales as $familia) {
             FamiliaProfesional::insert([
                 'codigo' => $familia['codigo'],
