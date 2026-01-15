@@ -54,7 +54,7 @@ class ProyectosController extends Controller
 
 
 
-    public static  $arrayProyectos = [
+    public  $arrayProyectos = [
         [
             'docente_id' => 1,
             'nombre' => 'Tecnologías de la Información',

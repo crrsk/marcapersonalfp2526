@@ -26,7 +26,7 @@ Route::get('/', [HomeController::class, 'getHome'])
 
 // ----------------------------------------
 Route::prefix('proyectos')->group(function () {
-
+    Route::get('/', [ProyectosController::class, 'getIndex']);
     Route::get('show/{id}', [ProyectosController::class, 'getShow'])->where('id', '[0-9]+');
 
     Route::group(['middleware' => 'auth'], function () {
