@@ -11,7 +11,7 @@ use App\Models\Idioma;
 class IdiomasApiTest extends TestCase
 {
     use RefreshDatabase;
-
+    protected $seed=true;
     private function idiomaPayload(array $overrides = [])
     {
         return array_merge([

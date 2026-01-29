@@ -15,10 +15,8 @@ class UserIdiomaController extends Controller
      * Display a listing of the resource.
      */
     public function index(Request $request,User $user,Idioma $idioma)
-    {
-        return UserIdiomaResource::collection(
-            UserIdioma::orderBy($request->sort ?? 'id', $request->order ?? 'asc')
-            ->paginate($request->per_page))->where('user_id',$user->id);
+    {  //$user->idiomas()->where('user_id',$user->id);
+        return $user->idiomas()->get();
     }
 
     /**
